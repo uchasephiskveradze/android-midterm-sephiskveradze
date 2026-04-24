@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/us_dze_tv_input_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Financial Input"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/us_dze_til_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Monthly Income"
+        app:layout_constraintTop_toBottomOf="@id/us_dze_tv_input_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/us_dze_et_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/us_dze_til_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Monthly Expenses"
+        app:layout_constraintTop_toBottomOf="@id/us_dze_til_income">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/us_dze_et_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/us_dze_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Save &amp; Calculate"
+        app:layout_constraintTop_toBottomOf="@id/us_dze_til_expenses" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
